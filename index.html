@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentrem Residence</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Parallax Section -->
+    <div class="parallax"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="logo">Tentrem Residence</div>
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#properties">Properties</a>
+            <a href="#facilities">Facilities</a>
+            <a href="#rent">Rent</a>
+        </nav>
+    </header><br><br>
+
+    <!-- About Page -->
+    <div id="about" class="container">
+        <h1>About Us</h1>
+        <p>Selamat datang di Tentrem Residence. Kami menyediakan akomodasi low-rise apartment yang cocok untuk pekerja di Jakarta. Akomodasi kami terletak di area Transit-Oriented Development di Jakarta sehingga akses ke transportasi masal sangat dekat untuk mempermudah mobilisasi penghuni dan menghindari kemacetan. Tersedia unit 1 BR dan 2 BR yang cocok untuk pekerja single dan yang sudah berpasangan.</p>
+    </div><br>
+
+    <!-- Properties Page -->
+    <div id="properties" class="container">
+        <h1>Properties in Jakarta</h1>
+        <div id="properties_image" class="container">
+            <ul>
+                <li>
+                    Tentrem Residence Dukuh Atas<br>
+                    <img src="image/apartment_1.jpg" alt="Tentrem Residence Dukuh Atas" width="300">
+                </li>
+                <li>
+                    Tentrem Residence Blok M<br>
+                    <img src="image/apartment_2.jpg" alt="Tentrem Residence Blok M" width="300">
+                </li>
+                <li>
+                    Tentrem Residence Rasuna Said<br> 
+                    <img src="image/apartment_3.jpg" alt="Tentrem Residence Rasuna Said" width="300">
+                </li>
+                <li>
+                    Tentrem Residence Jatinegara<br> 
+                    <img src="image/apartment_4.jpg" alt="Tentrem Residence Jatinegara" width="300">
+                </li>
+                <li>
+                    Tentrem Residence Lebak Bulus<br> 
+                    <img src="image/apartment_5.jpg" alt="Tentrem Residence Lebak Bulus" width="300">
+                </li>
+            </ul>
+        </div><br>
+    </div><br><br>
+
+    <!-- Facilities Page -->
+    <section id="facilities">
+        <div id="facilities-header" class="container">
+            <h1>Facilities</h1>
+            <p>Di seluruh properti kami tersedia fasilitas umum seperti gym, taman, dan tempat parkir untuk mobil ataupun motor gratis untuk menunjang kenyamanan penghuni</p>
+        </div>
+        <div class="grid-container">  
+            <div class="grid-item gym">
+                <img src="image/facilities_gym.jpg" alt="Gym" width = 100%>
+            </div>
+            <div class="grid-item taman">
+                <img src="image/facilities_taman.jpg" alt="Taman" width = 100%>
+            </div>
+            <div class="grid-item parkir">
+                <img src="image/facilities_parkir.jpg" alt="Parkir" width = 100%>
+            </div>  
+        </div>
+    </section>
+
+    <!-- Rent Page -->
+    <div id="rent" class="container">
+        <h1>Rent a Property</h1>
+        <form action="submit_rent_request.html" method="post">
+            <label for="name">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" placeholder="Faris Naufal"><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="08[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="08XX-XXXX-XXXX"><br>
+
+            <label for="properti">Properti:</label>
+            <select id="properti" name="properti">
+                <option value="Tentrem Residence Dukuh Atas">Tentrem Residence Dukuh Atas</option>
+                <option value="Tentrem Residence Blok M">Tentrem Residence Blok M</option>
+                <option value="Tentrem Residence Rasuna Said">Tentrem Residence Rasuna Said</option>
+                <option value="Tentrem Residence Jatinegara">Tentrem Residence Jatinegara</option>
+                <option value="Tentrem Residence Lebak Bulus">Tentrem Residence Lebak Bulus</option>
+            </select><br>
+
+            <label for="type">Tipe Unit:</label>
+            <select id="type" name="type">
+                <option value="1 BR">1 BR</option>
+                <option value="2 BR">2 BR</option>
+            </select><br>
+
+            <label for="durasi">Durasi:</label>
+            <select id="durasi" name="durasi">
+                <option value="3 Bulan">3 Bulan</option>
+                <option value="6 Bulan">6 Bulan</option>
+                <option value="12 Bulan">12 Bulan</option>
+            </select><br>
+
+            <label for="start_date">Tanggal Mulai Sewa:</label>
+            <input type="date" id="start_date" name="start_date"><br>
+
+            <input type="submit" value="Submit">
+        </form><br>
+    </div>
+
+    <!-- Footer Page -->
+    <footer class="footer">
+        <h1>Tentrem Residence by Faris Naufal</h1>
+        <h2>Contact Us at 08XX-XXXX-XXXX</h2>
+    </footer>
+</body>
+</html>

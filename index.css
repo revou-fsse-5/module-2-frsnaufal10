@@ -1,0 +1,375 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* General Styles */
+body {
+    font-family: 'Montserrat',sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Parallax Effect */
+.parallax {
+    background-image: url('image/apartment_1.jpg');
+    height: 500px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: #e0e0e0;
+}
+
+/* Background Image for Sections */
+#rent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/apartment_3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+#properties::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/background_properties.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+#about,
+#properties,
+#rent {
+    position:relative;
+    z-index: 1;
+    text-align: center;
+    justify-content: center;
+}
+
+#about.container,
+#properties_image.container,
+#facilities-header.container {
+    max-width: 800px;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #f3f9ec;
+    border-radius: 20px ;
+    padding: 20px;
+}
+
+/* Header and Navigation Styles */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #d7f4aa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: slideDown 1s forwards;
+}
+
+.header .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #045111;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation-delay: 0.2s;
+}
+
+.nav {
+    display: flex;
+    gap: 1.3rem;
+    animation: slideDown 1s forwards;
+    animation-delay: 0.4s;
+}
+
+.nav a {
+    text-decoration:overline;
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav a:hover {
+    color: #0fac2c;
+    transform: translateY(-2px);
+}
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* About Section */
+#about h1,
+#about p {
+    text-align: center;
+    justify-content: center;
+    font-family: 'Montserrat',sans-serif;
+}
+
+#about h1 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Properties Section */
+#properties h1 {
+    padding: 10px;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    color:#deebe0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#properties ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#properties ul li {
+    list-style: none;
+    margin: 20px;
+    text-align: center;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+#properties img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#properties img:hover {
+    transform: scale(1.7);
+}
+
+/* Facilities Section */ 
+#facilities h1 {
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    color: #025b0f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#facilities p {
+    text-align: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grid-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+
+.grid-item.gym {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.grid-item.taman {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.grid-item.parkir {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+/* Rent Section */
+#rent h1 {
+    padding: 20px;
+    font-family: 'Montserrat',sans-serif;
+    text-align: center;
+    color: #deebe0;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#rent form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#rent form label,
+#rent form input,
+#rent form textarea,
+#rent form select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#rent form input[type="submit"] {
+    width: 200px;
+    margin-top: 20px;
+    background-color: rgb(2, 106, 52);
+    color:white ;
+    transition: transform 0.3 sec ease;
+}
+
+#rent form input[type="submit"]:hover {
+    transform: scale(1.05);
+    color: rgb(137, 250, 137);
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color:#19351f;
+    color:#f3f9ec;
+    padding: 10px;
+}
+
+.footer h1 {
+    font-size: 1.2rem;
+}
+.footer h2 {
+    font-size: 1rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        /* padding: 1rem; */
+    }
+
+    .header .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .nav a {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    #about h1 {
+        font-size: 1.5rem;        
+    }
+
+    #about p {
+        font-size : 0.8rem;
+    }
+
+    #properties h1 {
+        font-size: 1.5rem;        
+    }
+
+    #properties_image.container {
+        max-width: 300px;
+    }
+
+    #properties_image img {
+        max-width: 280px;
+    }
+
+    #properties_image {
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #properties_image ul li {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+    }
+
+    #rent h1 {
+        font-size: 1.5rem;        
+    }
+
+    }
+    #rent form {
+        padding: 15px;
+        max-width: 300px;
+    }
+
+    #rent form label,
+    #rent form input,
+    #rent form textarea,
+    #rent form select {
+        margin-bottom: 8px;
+        font-size: 1rem;
+    }
+
+    .footer h1,
+    .footer h2 {
+        font-size: 0.8rem;
+    }
